@@ -1,15 +1,18 @@
 package com.PubLoc.Web;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-@RequestMapping("/index")
 public class MainController {
 
-  @RequestMapping(method = RequestMethod.GET)
+  @GetMapping("/index")
   public String index(){
     return "index";
+  }
+
+  @GetMapping("/test1")
+  public String test1(){
+    return "test1";
   }
 }
